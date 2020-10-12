@@ -7,19 +7,19 @@ A lightweight foundation for your next webpack based frontend project.
 ### Installation
 
 ```
-npm install
+yarn install
 ```
 
 ### Start Dev Server
 
 ```
-npm start
+yarn start
 ```
 
 ### Build Prod Version
 
 ```
-npm run build
+yarn run build
 ```
 
 ### Features:
@@ -30,4 +30,4 @@ npm run build
 - Autoprefixing of browserspecific CSS rules via [postcss](https://postcss.org/) and [autoprefixer](https://github.com/postcss/autoprefixer)
 - Style Linting via [stylelint](https://stylelint.io/)
 
-When you run `npm run build` we use the [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin) to move the css to a separate file. The css file gets included in the head of the `index.html`.
+When you run `yarn run build` we use the [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin) to move the css to a separate file. The css file gets included in the head of the `index.html`.
