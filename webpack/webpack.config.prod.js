@@ -1,27 +1,35 @@
+const Path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const Webpack = require('webpack');
-const { merge } = require('webpack-merge');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const common = require('./webpack.common.js');
 
-module.exports = merge(common, {
+module.exports = {
   mode: 'production',
-  devtool: 'source-map',
   stats: 'errors-only',
   bail: true,
+  entry: {
+    plugin: Path.resolve(__dirname, '../src/scripts/plugin.js'),
+  },
   output: {
-    filename: 'js/[name].[chunkhash:8].js',
-    chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
+    filename: '[name].min.js',
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new Webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
     }),
-    new MiniCssExtractPlugin({
-      filename: 'bundle.css',
-    }),
   ],
+  resolve: {
+    alias: {
+      '~': Path.resolve(__dirname, '../src'),
+    },
+  },
   module: {
     rules: [
+      {
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: 'javascript/auto',
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -29,8 +37,8 @@ module.exports = merge(common, {
       },
       {
         test: /\.s?css/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
     ],
   },
-});
+};
