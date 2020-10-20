@@ -7,7 +7,7 @@ module.exports = {
   stats: 'errors-only',
   bail: true,
   entry: {
-    plugin: Path.resolve(__dirname, '../src/scripts/plugin.js'),
+    plugin: Path.resolve(__dirname, '../src/scripts/registerQueryPluginLibretexts.js'),
   },
   output: {
     filename: '[name].min.js',

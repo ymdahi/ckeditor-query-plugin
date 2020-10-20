@@ -2,8 +2,9 @@ import '../styles/index.scss';
 
 import './config';
 import 'ckeditor4';
-import './plugin';
+import registerPlugin from './plugin';
 
 require('../index.html');
+registerPlugin();
 CKEDITOR.replace('editor');
 
