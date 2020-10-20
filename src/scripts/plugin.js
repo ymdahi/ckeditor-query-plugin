@@ -1,4 +1,5 @@
 const registerPlugin = () => {
+  console.log('test');
   CKEDITOR.plugins.add('libreTextsQuery', {
     init(editor) {
       editor.filter.allow('div(box-query);p(box-legend);p(mt-script-comment);pre(script)');
@@ -52,8 +53,13 @@ const registerPlugin = () => {
     },
   });
 
-  CKEDITOR.config.extraPlugins += 'libreTextsQuery';
+  if (CKEDITOR.config.extraPlugins.length === 0)
+    CKEDITOR.config.extraPlugins += 'libreTextsQuery';
+  else
+    CKEDITOR.config.extraPlugins += ',libreTextsQuery';
 };
+
+registerPlugin();
 
 export default registerPlugin;
 
