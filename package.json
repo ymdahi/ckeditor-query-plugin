@@ -1,7 +1,7 @@
 {
-  "name": "webpack-starter",
-  "version": "1.0.0",
-  "description": "A light foundation for your next frontend project based on webpack.",
+  "name": "ckeditor-query-plugin",
+  "version": "0.0.1",
+  "description": "Simle plugin to add query snippets on Libretexts",
   "scripts": {
     "lint": "npm run lint:styles; npm run lint:scripts",
     "lint:styles": "stylelint src",
@@ -21,10 +21,10 @@
     "javascript",
     "webdev"
   ],
-  "author": "webkid.io",
-  "license": "MIT",
+  "author": "ckeditor-query-plugin Development Team",
+  "license": "See LICENSE",
   "bugs": {
-    "url": "https://github.com/wbkd/webpack-starter/issues"
+    "url": "https://github.com/LibreTexts/ckeditor-query-plugin/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
