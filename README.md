@@ -19,7 +19,13 @@ yarn start
 ### Build Prod Version
 
 ```
-yarn run build
+yarn build
+```
+
+### Deploy to Test Site
+
+```
+yarn deploy:test
 ```
 
 ### Features:
