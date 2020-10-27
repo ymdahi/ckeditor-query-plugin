@@ -1,3 +1,4 @@
+import '../styles/index.scss';
 import registerPlugin from './plugin';
 
 // Adds this plugin to the LibreEditor for later activation
