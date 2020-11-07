@@ -21,6 +21,12 @@ const registerPlugin = () => {
                   type: 'text',
                   label: 'Please enter a valid page ID',
                   id: 'pageId',
+                  validate: function() {
+                    // see https://github.com/ckeditor/ckeditor4/blob/a786d6f43c17ef90c13b1cf001dbd00204a622b1/plugins/dialog/plugin.js#L3277
+                    let value = this && this.getValue ? this.getValue() : arguments[0];
+                    if (value.length === 0) return 'pageID cannot be empty';
+                    return CKEDITOR.dialog.validate.number("PageID must by a number")(value);
+                  },
                 }
               ],
             },
