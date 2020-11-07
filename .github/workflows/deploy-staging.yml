@@ -1,0 +1,23 @@
+name: deploy-staging
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  deploy-staging:
+    name: Deploy to Staging
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install SSH key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.STAGING_SSH_KEY }}
+        name: id_rsa # optional
+        known_hosts: github.com
+    - uses: actions/checkout@v2
+    - name: run deploy script
+      run: sh ./bin/deploy.sh
+
