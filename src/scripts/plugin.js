@@ -1,6 +1,7 @@
 const registerPlugin = () => {
   CKEDITOR.plugins.add('libreTextsQuery', {
     init(editor) {
+      // remove restrictions on what tags and css properties can be output
       editor.filter.allow('div(box-query);p(box-legend);p(mt-script-comment);pre(script)');
 
       CKEDITOR.dialog.add('libreTextsQueryDialog', (editor) => {
@@ -30,13 +31,13 @@ const registerPlugin = () => {
             const pageId = parseInt(dialog.getValueOf('tab1', 'pageId'));
 
             editor.insertHtml(`
-            <div class="box-query">
-              <p class="box-legend"><span>Query \\(\\PageIndex{1}\\)</span></p>
+              <div class="box-query">
+                <p class="box-legend"><span>Query \\(\\PageIndex{1}\\)</span></p>
 
-              <p class="mt-script-comment">Embed QUERY Assessment</p>
-              <pre class="script">template('query',{'PageID':'${pageId}'});</pre>
-            </div>
-          `);
+                <p class="mt-script-comment">Embed QUERY Assessment</p>
+                <pre class="script">template('query',{'PageID':'${pageId}'});</pre>
+              </div>
+            `);
           },
         };
       });
