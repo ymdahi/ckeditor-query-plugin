@@ -1,8 +1,6 @@
-# Webpack Frontend Starterkit
+# CKEditor Query Plugin
 
-[![Dependabot badge](https://flat.badgen.net/dependabot/wbkd/webpack-starter?icon=dependabot)](https://dependabot.com/)
-
-A lightweight foundation for your next webpack based frontend project.
+Libretexts tool for creating embedded problems in textbooks.
 
 ### Installation
 
@@ -25,15 +23,12 @@ yarn build
 ### Deploy to Test Site
 
 ```
-yarn deploy:test
+yarn deploy:test $BRANCH_NAME
 ```
 
-### Features:
+And find test page [here](https://query.libretexts.org/Development/Query_Plugin_Demo)
 
-- ES6 Support via [babel](https://babeljs.io/) (v7)
-- JavaScript Linting via [eslint-loader](https://github.com/MoOx/eslint-loader)
-- SASS Support via [sass-loader](https://github.com/jtangelder/sass-loader)
-- Autoprefixing of browserspecific CSS rules via [postcss](https://postcss.org/) and [autoprefixer](https://github.com/postcss/autoprefixer)
-- Style Linting via [stylelint](https://stylelint.io/)
+### How to understand the code
 
-When you run `yarn run build` we use the [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin) to move the css to a separate file. The css file gets included in the head of the `index.html`.
+Most important code is located in `./src/scripts/plugin.js`. You can follow the [official tutorial](https://ckeditor.com/docs/ckeditor4/latest/guide/plugin_sdk_sample_1.html) to understand each part.
+
