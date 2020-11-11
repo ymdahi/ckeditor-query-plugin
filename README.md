@@ -1,5 +1,5 @@
 # CKEditor Query Plugin
-
+![Sync to DigitalOcean Spaces](https://github.com/LibreTexts/ckeditor-query-plugin/workflows/Sync%20to%20DigitalOcean%20Spaces/badge.svg)
 Libretexts tool for creating embedded problems in textbooks.
 
 ### Installation
