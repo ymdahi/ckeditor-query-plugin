@@ -1,9 +1,10 @@
 name: Sync to DigitalOcean Spaces
 
-on: 
+on:
   push:
-    branches: 
+    branches:
       - master
+      - main
 
 jobs:
   deploy:
