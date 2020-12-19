@@ -1,6 +1,7 @@
 const registerPlugin = () => {
   CKEDITOR.plugins.add('libreTextsQuery', {
     init(editor) {
+      // remove restrictions on what tags and css properties can be output
       editor.filter.allow('div(box-query);p(box-legend);p(mt-script-comment);pre(script)');
 
       CKEDITOR.dialog.add('libreTextsQueryDialog', (editor) => {
@@ -20,6 +21,12 @@ const registerPlugin = () => {
                   type: 'text',
                   label: 'Please enter a valid page ID',
                   id: 'pageId',
+                  validate: function() {
+                    // see https://github.com/ckeditor/ckeditor4/blob/a786d6f43c17ef90c13b1cf001dbd00204a622b1/plugins/dialog/plugin.js#L3277
+                    let value = this && this.getValue ? this.getValue() : arguments[0];
+                    if (value.length === 0) return 'pageID cannot be empty';
+                    return CKEDITOR.dialog.validate.number("PageID must by a number")(value);
+                  },
                 }
               ],
             },
@@ -30,13 +37,13 @@ const registerPlugin = () => {
             const pageId = parseInt(dialog.getValueOf('tab1', 'pageId'));
 
             editor.insertHtml(`
-            <div class="box-query">
-              <p class="box-legend"><span>Query \\(\\PageIndex{1}\\)</span></p>
+              <div class="box-query">
+                <p class="box-legend"><span>Query \\(\\PageIndex{1}\\)</span></p>
 
-              <p class="mt-script-comment">Embed QUERY Assessment</p>
-              <pre class="script">template('query',{'PageID':'${pageId}'});</pre>
-            </div>
-          `);
+                <p class="mt-script-comment">Embed QUERY Assessment</p>
+                <pre class="script">template('query',{'PageID':'${pageId}'});</pre>
+              </div>
+            `);
           },
         };
       });
