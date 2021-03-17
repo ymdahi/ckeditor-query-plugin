@@ -12,6 +12,6 @@ LibreEditor.queryPlugin = (config) => {
   registerPlugin();
   config.toolbar[12].push('openLibretextsQueryDialog');
   registerAdapt();
-  config.toolbar[13].push('openLibretextsAdaptDialog');
+  config.toolbar[12].push('openLibretextsAdaptDialog');
 };
 

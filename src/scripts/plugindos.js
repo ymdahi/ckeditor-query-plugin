@@ -56,7 +56,7 @@ const registerAdapt = () => {
           label: 'Adapt Dialog',
           command: 'openLibretextsAdaptDialog',
           toolbar: 'insert',
-          icon: 'https://a.mtstatic.com/@public/production/site_4538/1579208579-favicon.ico',
+          icon: 'https://adapt.libretexts.org/favicon.ico',
         });
       },
     });
