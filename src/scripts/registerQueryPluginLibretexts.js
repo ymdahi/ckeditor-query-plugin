@@ -3,6 +3,7 @@
  */
 import '../styles/index.scss';
 import registerPlugin from './plugin';
+import registerAdapt from './plugindos';
 
 // Adds this plugin to the LibreEditor for later activation
 // this will ensure that `registerPlugin()` be called after
@@ -10,5 +11,7 @@ import registerPlugin from './plugin';
 LibreEditor.queryPlugin = (config) => {
   registerPlugin();
   config.toolbar[12].push('openLibretextsQueryDialog');
+  registerAdapt();
+  config.toolbar[13].push('openLibretextsAdaptDialog');
 };
 
