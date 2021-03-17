@@ -38,9 +38,9 @@ const registerAdapt = () => {
   
               editor.insertHtml(`
                 <div class="box-query">
-                <p class="box-legend"><span>ADAPT \(\PageIndex{1}\)</span></p>
+                <p class="box-legend"><span>ADAPT \\(\\PageIndex{1}\\)</span></p>
 
-                <p class="mt-script-comment">adapt embed code: '83-98164'</p>
+                <p class="mt-script-comment">adapt embed code: '${adaptID}'</p>
 
                 <pre class="script">
                 template('adapt/Activity',{'ID':'${adaptID}'});</pre>
