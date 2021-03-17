@@ -4,9 +4,9 @@ const registerAdapt = () => {
         // remove restrictions on what tags and css properties can be output
         editor.filter.allow('div(box-query);p(box-legend);p(mt-script-comment);pre(script)');
   
-        CKEDITOR.dialog.add('libreTextsAdaptDialog', (editor) => {
+        CKEDITOR.dialog.add('libretextsAdaptDialog', (editor) => {
           return {
-            title: 'LibreTexts Adapt Plugin',
+            title: 'Libretexts Adapt Plugin',
             resizable: CKEDITOR.DIALOG_RESIZE_BOTH,
             minWidth: 500,
             minHeight: 400,
@@ -50,7 +50,7 @@ const registerAdapt = () => {
           };
         });
   
-        editor.addCommand('openLibretextsAdaptDialog', new CKEDITOR.dialogCommand('libreTextsAdaptDialog'));
+        editor.addCommand('openLibretextsAdaptDialog', new CKEDITOR.dialogCommand('libretextsAdaptDialog'));
   
         editor.ui.addButton('openLibretextsAdaptDialog', {
           label: 'Adapt Dialog',
@@ -62,9 +62,9 @@ const registerAdapt = () => {
     });
   
     if (CKEDITOR.config.extraPlugins.length === 0)
-      CKEDITOR.config.extraPlugins += 'libreTextsAdapt';
+      CKEDITOR.config.extraPlugins += 'libretextsAdapt';
     else
-      CKEDITOR.config.extraPlugins += ',libreTextsAdapt';
+      CKEDITOR.config.extraPlugins += ',libretextsAdapt';
   };
   
   export default registerAdapt;
