@@ -1,4 +1,6 @@
 const registerPlugin = () => {
+
+  // create the query plugin
   CKEDITOR.plugins.add('libreTextsQuery', {
     init(editor) {
       // remove restrictions on what tags and css properties can be output
@@ -59,12 +61,13 @@ const registerPlugin = () => {
     },
   });
 
-  CKEDITOR.plugins.add('libretextsAdapt', {
+  // create the adapt plugin
+  CKEDITOR.plugins.add('libreTextsAdapt', {
     init(editor) {
       // remove restrictions on what tags and css properties can be output
       editor.filter.allow('div(box-query);p(box-legend);p(mt-script-comment);pre(script)');
 
-      CKEDITOR.dialog.add('libretextsAdaptDialog', (editor) => {
+      CKEDITOR.dialog.add('libreTextsAdaptDialog', (editor) => {
         return {
           title: 'Libretexts Adapt Plugin',
           resizable: CKEDITOR.DIALOG_RESIZE_BOTH,
@@ -110,7 +113,7 @@ const registerPlugin = () => {
         };
       });
 
-      editor.addCommand('openLibretextsAdaptDialog', new CKEDITOR.dialogCommand('libretextsAdaptDialog'));
+      editor.addCommand('openLibretextsAdaptDialog', new CKEDITOR.dialogCommand('libreTextsAdaptDialog'));
 
       editor.ui.addButton('openLibretextsAdaptDialog', {
         label: 'Insert Adapt',
@@ -122,9 +125,9 @@ const registerPlugin = () => {
   });
 
   if (CKEDITOR.config.extraPlugins.length === 0)
-    CKEDITOR.config.extraPlugins += 'libreTextsQuery,libretextsAdapt';
+    CKEDITOR.config.extraPlugins += 'libreTextsQuery,libreTextsAdapt';
   else
-    CKEDITOR.config.extraPlugins += ',libreTextsQuery,libretextsAdapt';
+    CKEDITOR.config.extraPlugins += ',libreTextsQuery,libreTextsAdapt';
 };
 
 export default registerPlugin;
