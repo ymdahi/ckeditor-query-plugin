@@ -97,7 +97,7 @@ const registerPlugin = () => {
           onOk() {
             const dialog = this;
 
-            const adaptID = parseInt(dialog.getValueOf('tab1', 'adaptID'));
+            const adaptID = dialog.getValueOf('tab1', 'adaptID');
 
             editor.insertHtml(`
               <div class="box-query">
