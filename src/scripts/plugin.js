@@ -103,7 +103,7 @@ const registerPlugin = () => {
               <div class="box-query">
               <p class="box-legend"><span>ADAPT \\(\\PageIndex{1}\\)</span></p>
 
-              <p class="mt-script-comment">adapt embed code: '${adaptID}'</p>
+              <p class="mt-script-comment">Embed ADAPT Assessment</p>
 
               <pre class="script">
               template('adapt/Activity',{'ID':'${adaptID}'});</pre>
