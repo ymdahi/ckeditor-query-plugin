@@ -82,7 +82,7 @@ const registerPlugin = () => {
               elements: [
                 {
                   type: 'text',
-                  label: 'Please enter a valid Adapt ID',
+                  label: 'Please enter a valid Adapt ID in the format 123-12345',
                   id: 'adaptID',
                   validate: function() {
                     // see https://github.com/ckeditor/ckeditor4/blob/a786d6f43c17ef90c13b1cf001dbd00204a622b1/plugins/dialog/plugin.js#L3277
@@ -131,4 +131,3 @@ const registerPlugin = () => {
 };
 
 export default registerPlugin;
-
