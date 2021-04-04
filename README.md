@@ -1,5 +1,5 @@
 # CKEditor Query and Adapt Plugin
-![Sync to DigitalOcean Spaces](https://github.com/LibreTexts/ckeditor-query-plugin/workflows/Sync%20to%20DigitalOcean%20Spaces/badge.svg)
+[![Sync to DigitalOcean Spaces](https://github.com/LibreTexts/ckeditor-query-plugin/actions/workflows/dodeploy.yml/badge.svg?branch=main)](https://github.com/LibreTexts/ckeditor-query-plugin/actions/workflows/dodeploy.yml)
 Libretexts tool for creating embedded problems in textbooks.
 
 ### Installation
