@@ -1,6 +1,6 @@
 {
   "name": "ckeditor-query-plugin",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Simle plugin to add query snippets on Libretexts",
   "scripts": {
     "lint": "npm run lint:styles; npm run lint:scripts",

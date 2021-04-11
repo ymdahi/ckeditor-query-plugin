@@ -1,3 +1,7 @@
+// print CKEditor Query Plugin version info
+const versionInfo = 'CKEditor Query Plugin Development Version';
+console.log(versionInfo);
+
 const registerPlugin = () => {
 
   // create the query plugin
