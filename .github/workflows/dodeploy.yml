@@ -9,7 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
     - name: Bump version number
       run: |
         VERSION=$(ls release/ | sort | tail -n1 | sed 's/\.md$//')
@@ -22,7 +22,7 @@ jobs:
         yarn install
         yarn build
     - name: Sending to DigitalOcean
-      uses: LibreTexts/do-space-sync-action@master
+      uses: LibreTexts/do-space-sync-action@main
       with:
         args: --acl public-read
       env:
