@@ -24,6 +24,7 @@ yarn build
 
 ```
 yarn deploy:test $BRANCH_NAME
+<<<<<<< HEAD
 ```
 
 And find test page [here](https://query.libretexts.org/Development/Query_Plugin_Demo)
