@@ -61,7 +61,7 @@ The javascript code `template('adapt/Activity',{'ID':'${adaptID}'})` is managed 
 
 If the `ID` is valid, you should see something like this:
 
-[uncertain-what-to-use.png]
+![working example](document_visuals/adapt_example.png)
 
 ### How to use the plugin?
 
