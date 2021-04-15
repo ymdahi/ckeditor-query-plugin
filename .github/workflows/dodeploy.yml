@@ -42,4 +42,4 @@ jobs:
       env:
         CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
         CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
-        PURGE_URLS: '["https://cdn.libretexts.net/github/ckeditor-query-plugin/js/queryPlugin.min.js", "https://cdn.libretexts.net/github/ckeditor-query-plugin/js/queryPlugin.min.js.map"]'
+        PURGE_URLS: '["https://cdn.libretexts.net/github/ckeditor-query-plugin/queryPlugin.min.js", "https://cdn.libretexts.net/github/ckeditor-query-plugin/queryPlugin.min.js.map"]'
