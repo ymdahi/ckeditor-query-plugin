@@ -26,7 +26,7 @@ jobs:
       with:
         args: --acl public-read
       env:
-        SOURCE_DIR: './build'
+        SOURCE_DIR: './public'
         DEST_DIR: 'github/ckeditor-query-plugin'
         SPACE_NAME: ${{ secrets.Spaces_Name }}
         SPACE_REGION: ${{ secrets.Spaces_Region}}
