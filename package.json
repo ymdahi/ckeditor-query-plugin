@@ -58,6 +58,7 @@
     "@babel/polyfill": "^7.11.5",
     "ckeditor4": "^4.15.0",
     "core-js": "^3.6.5",
+    "hosted-git-info": "3.0.8",
     "sass": "^1.32.13"
   }
 }
