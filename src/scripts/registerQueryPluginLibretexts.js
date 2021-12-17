@@ -7,9 +7,9 @@ import registerPlugin from './plugin';
 // Adds this plugin to the LibreEditor for later activation
 // this will ensure that `registerPlugin()` be called after
 // CKeditor is initialized on Libretexts page
-LibreEditor.queryPlugin = (config) => {
+LibreEditor.ydahiPlugin = (config) => {
   registerPlugin();
-  config.toolbar[12].push('openLibretextsQueryDialog');
-  config.toolbar[12].push('openLibretextsAdaptDialog');
+  //config.toolbar[12].push('timestampbutton');
+  //config.toolbar[12].push('openLibretextsAdaptDialog');
 };
 

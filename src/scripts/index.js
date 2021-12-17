@@ -1,7 +1,7 @@
 /*
  * This file is for development only
  */
-import '../styles/index.scss';
+//import '../styles/index.scss';
 
 import './config';
 import 'ckeditor4';
