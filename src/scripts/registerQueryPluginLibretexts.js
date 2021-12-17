@@ -9,7 +9,7 @@ import registerPlugin from './plugin';
 // CKeditor is initialized on Libretexts page
 LibreEditor.ydahiPlugin = (config) => {
   registerPlugin();
-  //config.toolbar[12].push('timestampbutton');
+  config.toolbar[12].push('Timestamp');
   //config.toolbar[12].push('openLibretextsAdaptDialog');
 };
 
