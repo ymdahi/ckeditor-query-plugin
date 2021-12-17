@@ -7,7 +7,7 @@ module.exports = {
   stats: 'errors-only',
   bail: true,
   entry: {
-    queryPlugin: Path.resolve(__dirname, '../src/scripts/registerQueryPluginLibretexts.js'),
+    timestampPlugin: Path.resolve(__dirname, '../src/scripts/registerTimestampPluginLibretexts.js'),
   },
   output: {
     filename: '[name].min.js',
